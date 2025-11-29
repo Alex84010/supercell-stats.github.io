@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash Royale Stats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cr-page">
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-btn">← Retour</a>
+            <h1 class="page-title">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                </svg>
+                Clash Royale
+            </h1>
+            <div class="spacer"></div>
+        </div>
+
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="playerTag" 
+                placeholder="Entrez votre tag (ex: #ABC123)"
+                class="search-input"
+            >
+            <button onclick="searchPlayer()" class="search-btn" id="searchBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                Rechercher
+            </button>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+        <div id="loading" class="loading hidden">Chargement...</div>
+        <div id="stats" class="stats-container hidden"></div>
+    </div>
+
+    <script src="clashroyale.js"></script>
+</body>
+</html>
